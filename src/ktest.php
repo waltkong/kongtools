@@ -1,2 +1,6 @@
 <?php
-echo 'haha';
+namespace KongTools;
+
+class Configs{
+
+}
