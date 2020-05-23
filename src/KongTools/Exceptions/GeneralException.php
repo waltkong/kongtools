@@ -4,10 +4,10 @@ namespace KongTools\Exceptions;
 use Throwable;
 
 /**
- * 数据库 过程中抛出异常
+ * 如果不知道返回什么报错，就抛出这个类
  * @package KongTools\Exceptions
  */
-class HttpException extends \Exception{
+class GeneralException extends \Exception{
 
     public function __construct($message = "", $code = 0, Throwable $previous = null)
     {

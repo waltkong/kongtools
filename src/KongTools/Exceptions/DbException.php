@@ -5,7 +5,6 @@ use Throwable;
 
 /**
  * 数据库 过程中抛出异常
- * Class JwtException
  * @package KongTools\Exceptions
  */
 class DbException extends \Exception{
