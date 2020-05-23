@@ -16,7 +16,6 @@ class WechatService{
 
     public function __construct($options=[])
     {
-
         $options_default = [
             'wechat_user_key' => 'wk_wechat_user',
             'wechat_target_url_key' => 'wk_wechat_target_url',
