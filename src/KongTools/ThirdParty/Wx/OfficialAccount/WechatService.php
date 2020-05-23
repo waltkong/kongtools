@@ -39,7 +39,7 @@ class WechatService{
 
     private function sessionSet($key,$val){
         $func = self::$constuct_options['set_session_func'];
-        return $func($key);
+        return $func($key,$val);
     }
 
 
