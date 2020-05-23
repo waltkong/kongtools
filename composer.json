@@ -1,0 +1,26 @@
+{
+    "name": "waltkong/kongtools",
+    "description": "it is all about kong's dev packages;",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "kongweitao",
+            "email": "1148568473@qq.com",
+            "homepage": "https://github.com/waltkong"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "guzzlehttp/guzzle": "~6.0",
+        "tymon/jwt-auth": "^1.0",
+        "simplesoftwareio/simple-qrcode": "~2",
+        "overtrue/wechat": "~4.0"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Waltkong\\Kongtools\\": "src/"
+        }
+    }
+}
