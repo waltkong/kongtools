@@ -10,11 +10,12 @@
         }
     ],
     "require": {
-        "php": "^7.2",
         "guzzlehttp/guzzle": "~6.0",
         "tymon/jwt-auth": "^1.0",
         "simplesoftwareio/simple-qrcode": "~2",
-        "overtrue/wechat": "~4.0"
+        "overtrue/wechat": "~4.0",
+        "catfan/medoo": "^1.6",
+        "chumper/zipper": "1.0.x"
     },
     "require-dev": {
     },

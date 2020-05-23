@@ -55,6 +55,19 @@ class JsonUtil{
         return $ret;
     }
 
+
+    /**
+     *  JSON_UNESCAPED_UNICODE
+     * @param $jsonArr
+     * @return string
+     */
+    public static function jsonChinese($jsonArr){
+
+        if(is_string($jsonArr)) return $jsonArr;
+
+        return json_encode($jsonArr,JSON_UNESCAPED_UNICODE);
+    }
+
 }
 
 

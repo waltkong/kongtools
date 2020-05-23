@@ -1,6 +1,6 @@
 <?php
 namespace KongTools;
 
-class Configs{
+class ktest{
 
 }
