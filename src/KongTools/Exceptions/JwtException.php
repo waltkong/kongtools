@@ -4,11 +4,11 @@ namespace KongTools\Exceptions;
 use Throwable;
 
 /**
- * 签名过程中 抛出异常
- * Class SignException
+ * jwt 加密解密过程中抛出异常
+ * Class JwtException
  * @package KongTools\Exceptions
  */
-class SignException extends \Exception{
+class JwtException extends \Exception{
 
     public function __construct($message = "", $code = 0, Throwable $previous = null)
     {
