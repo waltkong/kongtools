@@ -19,7 +19,6 @@ class TimeUtil{
         ];
     }
 
-
     /**
      * date =》 timestamp
      * @param $tr string
@@ -35,12 +34,21 @@ class TimeUtil{
         return strtotime($ret);
     }
 
-    public static function UTC2dateTime($str){
+    /**
+     *  utc时间 =》 datetime
+     * @param $str
+     * @return string
+     */
+    public static function UTC2Datetime($str){
         $str =  str_replace("T"," ",$str);
         $str =  str_replace("Z","",$str);
         return trim($str);
     }
 
+    /** timestamp =》 utc时间
+     * @param $str
+     * @return string
+     */
     public static function timestamp2UTC($str){
         $date1 = date('Y-m-d',$str);
         $date2 = date('H:i:s',$str);

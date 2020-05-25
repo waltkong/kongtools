@@ -7,7 +7,7 @@ use Chumper\Zipper\Facades\Zipper;
  *  压缩工具
  *  vendor "chumper/zipper": "1.0.x"
  * */
-class ZipperTool
+class ZipUtil
 {
     /**
      * 将 $folder 目录下的文件全部打包压缩
