@@ -3,6 +3,11 @@ namespace KongTools\Utils\Qrcode;
 
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
+/**
+ *  二维码
+ * Class QrcodeUtil
+ * @package KongTools\Utils\Qrcode
+ */
 class QrcodeUtil{
 
     /**

@@ -56,7 +56,57 @@ class TimeUtil{
     }
 
 
+    /**
+     * 获取时间戳到毫秒
+     * @return float
+     */
+    public static function getMillisecond() {
+        list($msec, $sec) = explode(' ', microtime());
+        $msectime = (float)sprintf('%.0f', (floatval($msec) + floatval($sec)) * 1000);
+        return $msectimes = substr($msectime, 0, 13);
+    }
 
+
+    /**
+     *  获取本月所有每天的日期
+     * @return array
+     */
+    public static function getThisMonthDates(){
+
+        $firstDay = date('Y-m-01',time());
+        $lastDay = date('Y-m-d',strtotime("$firstDay +1 month -1 day"));
+        $firstTimeStamp = strtotime($firstDay);
+        $lastTimeStamp = strtotime($lastDay);
+        $allDates = [];
+        for($i=$firstTimeStamp;$i<=$lastTimeStamp;$i+=24*3600){
+            $allDates[] = date('Y-m-d',$i);
+        }
+        return [
+            'first_timestamp' => $firstTimeStamp,
+            'last_timestamp' => $lastTimeStamp,
+            'all_dates' => $allDates
+        ];
+    }
+
+    /**
+     *  获取上月所有每天的日期
+     * @return array
+     */
+    public static function getLastMonthDates(){
+        $firstDay = date('Y-m-01',strtotime('-1 month'));
+        $lastDay = date('Y-m-d',strtotime("$firstDay +1 month -1 day"));
+        $firstTimeStamp = strtotime($firstDay);
+        $lastTimeStamp = strtotime($lastDay);
+        $allDates = [];
+        for($i=$firstTimeStamp;$i<=$lastTimeStamp;$i+=24*3600){
+            $allDates[] = date('Y-m-d',$i);
+        }
+        return [
+            'first_timestamp' => $firstTimeStamp,
+            'last_timestamp' => $lastTimeStamp,
+            'all_dates' => $allDates
+        ];
+    }
 
 
 

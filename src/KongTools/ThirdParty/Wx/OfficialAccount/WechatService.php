@@ -2,6 +2,7 @@
 namespace KongTools\ThirdParty\Wx\OfficialAccount;
 
 use EasyWeChat\Factory;
+use EasyWeChat\Kernel\Messages\Text;
 
 /**
  *  微信公众号
@@ -110,6 +111,25 @@ class WechatService{
         $route = $this->sessionGet(self::$constuct_options['wechat_target_url_key']);
 
         header("Location: $route");die;
+    }
+
+
+    /**
+     * 向指定用户发消息
+     * @param $official_config
+     * @param $openid
+     * @param $msg
+     */
+    public function pushMessageToUser($official_config, $openid, $msg){
+
+        $app = Factory::officialAccount($official_config);
+
+        $message = new Text($msg);
+
+        $result = $app->customer_service->message($message)->to($openid)->send();
+
+        return $result;
+
     }
 
 
