@@ -1,22 +1,13 @@
 <?php
 namespace KongTools\Db\DbClass;
 
-use KongTools\Db\DbInterface\DbInterface;
 use KongTools\Exceptions\DbException;
-use Medoo\Medoo;
-
-/**
- *  使用 meedo可以轻便操作数据库，具体操作见文档 "https://medoo.lvtao.net/1.2/doc.php"
- * Class Mysql
- * @package KongTools\Db\DbClass
- */
-class Mysql{
-
+class WorkermanMysql
+{
     static $db;
 
     public function __construct()
     {
-
     }
 
     public function connect(array $options)
@@ -37,7 +28,11 @@ class Mysql{
         }
 
         try{
-            self::$db =  new Medoo($default_options);
+            self::$db =  new \Workerman\MySQL\Connection($default_options['server'],
+                $default_options['port'],
+                $default_options['username'],
+                $default_options['password'],
+                $default_options['database_name']);
         }catch (\Exception $e){
             throw new DbException('connect error');
         }
@@ -46,5 +41,8 @@ class Mysql{
     }
 
 
+    public function getInstance(){
+        return self::$db;
+    }
 
 }
