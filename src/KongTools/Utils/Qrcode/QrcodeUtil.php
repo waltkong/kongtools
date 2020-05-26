@@ -14,8 +14,8 @@ class QrcodeUtil{
      *获取二维码的图片src
      * $data
      */
-    public function getSrc($data,$size=300,$logoUrl=''){
-        $qrCode = self::generate($data,$size,$logoUrl);
+    public function getSrc($data,$size=300,$logoUrl='',$errorCorrection='Q'){
+        $qrCode = self::generate($data,$size,$logoUrl,$errorCorrection);
         $src =  "data:image/png;base64,".base64_encode($qrCode);
         return $src;
     }
