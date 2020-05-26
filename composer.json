@@ -2,6 +2,7 @@
     "name": "waltkong/kongtools",
     "description": "it is all about kong's dev packages;",
     "license": "MIT",
+    "version":"1.0.1",
     "authors": [
         {
             "name": "kongweitao",
